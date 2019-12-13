@@ -15,8 +15,10 @@ $ npm install --save-dev webpack webpack-dev-server webpack-cli
 ```
 
 1. webpack 설정 파일 webpack.config.js 파일 생성
-```json
+
+``` json
 module.exports = {
+
   entry: [
     './web/src/index.js'
   ],
