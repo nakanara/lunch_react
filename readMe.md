@@ -1,20 +1,21 @@
-# 프로젝트 설정
+### 프로젝트 설정
 
 1. $ npm init -y 통해 기본 package.json 파일 생성
 2. webpack 을 위한 라이브러리 설치
 
-$ npm install --save-dev webpack webpack-dev-server webpack-cli
-> --save-dev package.json 에 저장하며, 
+> $ npm install --save-dev webpack webpack-dev-server webpack-cli  
+> --save-dev package.json 에 저장하며,   
 > -dev 개발에서만 사용
 
-1. 개발용 서버를 사용하기 위해 package.json 수정
+3. 개발용 서버를 사용하기 위해 package.json 수정
+
 ``` json
 "scripts": {
   "start":"webpack-dev-server --config ./webpack.config.js --mode development"
 }
 ```
 
-1. webpack 설정 파일 webpack.config.js 파일 생성
+4. webpack 설정 파일 webpack.config.js 파일 생성
 
 ``` json
 module.exports = {
@@ -33,7 +34,7 @@ module.exports = {
 };
 ```
 
-설정 후 
+(설정 후 실행 결과) 
 $ npm start
 ```
 [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] (webpack)-dev-server/client?http://localhost:8080 4.29 KiB {main} [built]
@@ -43,16 +44,16 @@ $ npm start
 i ｢wdm｣: Compiled successfully.
 ```
 
-1. 바벨 설치
+5. 바벨 설치
 
 > react는 대부분 es6문법으로 진행되나 브라우저에 따라서 실행되지 않을 수 있음, 바벨로 기존 자바스크립트 문법으로 변환
 
-$ npm install --save-dev @babel/core
-$ npm install --save-dev @babel/cli
-$ npm install --save-dev babel-loader 
+$ npm install --save-dev @babel/core  
+$ npm install --save-dev @babel/cli  
+$ npm install --save-dev babel-loader   
 > webpack 용 바벨 로더
 $ npm install --save-dev @babel/preset-env
-
+  
 $ npm install --save-dev @babel/preset-react
 > 리액트 언어를 변환해주는 perset 
 
@@ -72,6 +73,7 @@ $ npm install --save-dev @babel/preset-react
 
 ```json
 -- webpack.config.js 수정
+
 module.exports = {
   entry: [
     ...
@@ -95,10 +97,8 @@ module.exports = {
 ```
 
 
-1. react, react-dom 설치
+6. react, react-dom 설치
 
 $ npm install --save react react-dom
 
 
-#### 참고
-https://lunchmenu0001.herokuapp.com/
