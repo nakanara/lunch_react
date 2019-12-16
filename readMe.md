@@ -102,3 +102,34 @@ module.exports = {
 $ npm install --save react react-dom
 
 
+
+7. css, sass 로더를 설치
+
+$ npm install --save-dev style-loader css-loader
+$ npm install --save-dev sass-loader node-sass
+
+```
+-- webpack.config.js 변경
+module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
+        test: /\.(scss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
+
+```
+
+8. SPA 를 위한 react-rounter-dom 설치
+
+$ npm install --save react-rounter-dom
+
+9.  여러 환경의 설정을 동일하게 하기 위해 cross-evn 설치
+
+$ npm install --save-d cross-evn

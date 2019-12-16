@@ -11,6 +11,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.(scss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
@@ -22,7 +26,9 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  /* https://webpack.js.org/configuration/dev-server/ */
   devServer: {
-    contentBase: './web'
+    contentBase: './web',
+    historyApiFallback: true
   }
 };

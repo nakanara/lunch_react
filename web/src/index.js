@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./styles/main.scss";
+import Root from "./Root";
 
-const title = 'Ramdon Menu (React|WebPack|Babel)';
+
+const title = 'Ramdon Menu (React|WebPack|Babel)-';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <Root title={title}>aaa</Root>,
   document.getElementById('root')
 );
+
