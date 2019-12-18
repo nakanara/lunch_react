@@ -17,7 +17,7 @@
 
 4. webpack 설정 파일 webpack.config.js 파일 생성
 
-```json
+```javascript
 
 module.exports = {
   entry: [
@@ -58,7 +58,7 @@ $ npm install --save-dev @babel/preset-react
 > 리액트 언어를 변환해주는 perset 
 
 추가 후 package.json 에 바벨 설정 추가
-```json
+```javascript
 -- package.json
  "babel": {
     "presets": [
@@ -71,26 +71,26 @@ $ npm install --save-dev @babel/preset-react
   }
 ```
 
-```json
+```javascript
 /* webpack.config.js 수정 */
 
 module.exports = {
-  entry: [
+  "entry": [
     ...
   ],
-  module: {
-    rules: [
+  "module": {
+    "rules": [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
+        "test": /\.(js|jsx)$/,
+        "exclude": /node_modules/,
+        "use": ["babel-loader"]
       }
     ]
   },
-  resolve: {
-    extensions: ["*", ".js", ".jsx"]
+  "resolve": {
+    "extensions": ["*", ".js", ".jsx"]
   },
-  output: {
+  "output": {
     ...
   }
 }
@@ -108,8 +108,8 @@ $ npm install --save react react-dom
 $ npm install --save-dev style-loader css-loader
 $ npm install --save-dev sass-loader node-sass
 
-```
--- webpack.config.js 변경
+```javascript
+// webpack.config.js 변경
 module: {
     rules: [
       {
@@ -151,3 +151,6 @@ import update from 'immutability-helper';
 $ npm install --save prop-types
 https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
 
+
+
+mongodb+srv://lunch_menu:<password>@cluster0-0akd1.mongodb.net/test?retryWrites=true&w=majority
