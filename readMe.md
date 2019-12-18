@@ -154,3 +154,18 @@ https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
 
 
 mongodb+srv://lunch_menu:<password>@cluster0-0akd1.mongodb.net/test?retryWrites=true&w=majority
+
+
+
+# 2019.12.17 
+
+mongodb, nodemon backend 설정
+
+$npm install --save exp
+
+# 2019.12.19
+
+Dom 객체에 접근하기 위해서는 ref 사용.
+ref={(ref) => this.nameInput = ref}
+
+this.nameInput.focus();
