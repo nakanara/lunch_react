@@ -17,9 +17,9 @@
 
 4. webpack 설정 파일 webpack.config.js 파일 생성
 
-``` json
-module.exports = {
+```json
 
+module.exports = {
   entry: [
     './web/src/index.js'
   ],
@@ -72,7 +72,7 @@ $ npm install --save-dev @babel/preset-react
 ```
 
 ```json
--- webpack.config.js 수정
+/* webpack.config.js 수정 */
 
 module.exports = {
   entry: [
@@ -133,3 +133,21 @@ $ npm install --save react-rounter-dom
 9.  여러 환경의 설정을 동일하게 하기 위해 cross-evn 설치
 
 $ npm install --save-d cross-evn
+
+#####
+
+Tutorial
+
+$ npm install --save immutability-helper 
+// 데이터 변경 유틸
+https://github.com/kolodny/immutability-helper
+https://poiemaweb.com/js-immutability
+
+```javascript
+import update from 'immutability-helper';
+```
+
+// 속성
+$ npm install --save prop-types
+https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
+

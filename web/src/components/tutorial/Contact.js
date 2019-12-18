@@ -1,6 +1,8 @@
 import React from 'react';
 import ContactInfo from './ContactInfo';
 import ContactDetails from './ContactDetails';
+import ContactCreate from './ContactCreate';
+import update from 'immutability-helper';
 
 export default class Contact extends React.Component {
     
@@ -27,6 +29,7 @@ export default class Contact extends React.Component {
       // this. 객체 매핑
       this.handlerChange = this.handlerChange.bind(this);
       this.handlerClick = this.handlerClick.bind(this);
+      this.handleCreate = this.handleCreate.bind(this);
   }
 
   handlerChange(e) {
@@ -38,6 +41,15 @@ export default class Contact extends React.Component {
   handlerClick(key) {
     this.setState({selectKey: key});
     console.log(`${key} is selected`);
+  }
+
+  handleCreate(contact) {
+
+    console.log(contact);
+    this.setState({
+      // contactData: this.state.contactData.concat(contact),      
+      contactData: update(this.state.contactData, { $push: [contact] })
+    });
   }
   
   render() {
@@ -62,6 +74,7 @@ export default class Contact extends React.Component {
             <div>{mapToComponents(this.state.contactData)}</div>
             <ContactDetails isSelected={this.state.selectKey != -1} 
               contact={this.state.contactData[this.state.selectKey]}/>
+            <ContactCreate onCreate={this.handleCreate}/>
           </div>
       );
   }
