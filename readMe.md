@@ -139,22 +139,17 @@ $ npm install --save-d cross-evn
 Tutorial
 
 $ npm install --save immutability-helper 
-// 데이터 변경 유틸
-https://github.com/kolodny/immutability-helper
-https://poiemaweb.com/js-immutability
+// 데이터 변경 유틸    
+[immutability-helper github](https://github.com/kolodny/immutability-helper)   
+[immutability 설명](https://poiemaweb.com/js-immutability)
 
 ```javascript
 import update from 'immutability-helper';
 ```
 
 // 속성
-$ npm install --save prop-types
-https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
-
-
-
-mongodb+srv://lunch_menu:<password>@cluster0-0akd1.mongodb.net/test?retryWrites=true&w=majority
-
+$ npm install --save prop-types    
+[typechecking-with-proptypes](https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html)
 
 
 # 2019.12.17 
@@ -172,7 +167,7 @@ this.nameInput.focus();
 
 # 2019.12.19
  
-[React Life cycle](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+[React Life cycle](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)   
 [React Component](https://ko.reactjs.org/docs/react-component.html)
 
 
@@ -246,3 +241,25 @@ this.nameInput.focus();
 
 
 constructor // 컴포넌트가 가장 처음 만들어 질때 실행, 기본 state 설정 가능
+
+# etc
+
+mlab mongodb 테스트 관련
+> mongodb+srv://lunch_menu:<password>@cluster0-0akd1.mongodb.net/test?retryWrites=true&w=majority
+
+
+# ref
+[ReactJS](https://ko.reactjs.org/docs)  
+[babel](https://babeljs.io/docs/en/)  
+[Webpack](https://webpack.js.org/concepts/)
+   
+[typechecking-with-proptypes](https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html)
+
+** react 강의**  
+[velopert](https://velopert.com)   
+[velopert Youtube React 강의](https://www.youtube.com/playlist?list=PL9FpF_z-xR_GMujql3S_XGV2SpdfDBkeC)   
+[velopert slides](http://slides.com/minjunkim-1/deck#/)   
+
+
+[outsider 바벨 설명](https://blog.outsider.ne.kr/1176)
+[immutability 설명](https://poiemaweb.com/js-immutability)   
