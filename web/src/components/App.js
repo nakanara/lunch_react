@@ -5,6 +5,9 @@ import Footer from "./layout/footer";
 import { Home, About } from "../pages";
 import Contact from './tutorial/Contact';
 
+/*
+TEST
+*/
 
 class App extends React.Component {
   

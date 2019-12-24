@@ -14,6 +14,22 @@ export default class ContactCreate extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
+  componentWillMount() {
+    const contactData = localStorage.contactData;
+
+    if(contactData) {
+      this.setState({
+        contactData : JSON.parse(contactData)
+      })
+    }
+  }
+
+  componentWillUpdate(prevProps, prevState) {
+    if(JSON.stringify(prevState.contactData) !== JSON.stringify(this.state.contactData)) {
+      localStorage.contactData = JSON.stringify(this.state.contactData);
+    }
+  }
+
   handleChange(e) {
     let nextState = {};
     nextState[e.target.name] = e.target.value;
