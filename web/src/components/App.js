@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Footer from "./layout/footer";
 import { Home, About } from "../pages";
 import Contact from './tutorial/Contact';
+import LifeCycle from './tutorial/LifeCycle';
 
 /*
 TEST
@@ -21,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Contact />
+      <LifeCycle />
     )
   }
   // render() {
