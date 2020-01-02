@@ -26,13 +26,21 @@ export default class LifeCycle extends React.Component {
 
   // Did Mount
   componentDidMount(){
+    // 외부 API 연동, 컴포넌트에 필요한 데이터 로드
     console.log('componentDidMount');
   }
 
+  // 특정 props 가 변경될 때 설정하고 싶은 state 값을 리턴하는 형태
   // static getDerivedStateFromProps (props, state){
   //   console.log('getDerivedStateFromProps');
   //   return null;
   // }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    // 업데이트 여부 true일 경우 render
+    console.log('shouldComponentUpdate');
+    return true;
+  }
 
   getSnapshotBeforeUpdate(pervProps, pervState){
     console.log('getSnapshotBeforeUpdate');
