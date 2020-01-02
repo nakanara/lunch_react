@@ -20,9 +20,15 @@ class App extends React.Component {
 
   }
 
-  render() {
+  // render() {
+  //   return (
+  //     <LifeCycle />
+  //   )
+  // }
+
+  render(){
     return (
-      <LifeCycle />
+      <Contact></Contact>
     )
   }
   // render() {
@@ -30,7 +36,7 @@ class App extends React.Component {
   //     <>
   //       <h1>{this.props.title}</h1>
   //       <button onClick={()=> this.setState({name:"Click"})}>Click Me!1</button>
-  //       <label>{this.state.name} dho?? </label>
+  //       <label>{this.state.name} who?? </label>
   //       <div>
   //         <Route exact path="/" component={Home} />
   //         <Route path="/about" component={About} />

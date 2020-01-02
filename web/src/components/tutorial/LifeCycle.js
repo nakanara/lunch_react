@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+/**
+ * https://jistol.github.io/frontend/2018/12/10/react-lifecycle-methods/
+ * 
+ * V16.3과 16.4의 차이는 props 변경시 이벤트 16.3에서는 신규 props에서만 getDerivedStateFromProps가 호출되었지만 16.4+에서는 props변화시 호출
+ * 
+ * 화면 변경시
+ * render()
+ * getSnapshotBeforeUpdate // 업데이트 이후
+ * 실제 DOM 변화
+ * componentDidUpdate
+ */
 export default class LifeCycle extends React.Component {
   constructor(props){
     super(props);
@@ -40,6 +52,13 @@ export default class LifeCycle extends React.Component {
     // 업데이트 여부 true일 경우 render
     console.log('shouldComponentUpdate');
     return true;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    // shouldComponentUpdate 에서 true일 경우에만 호출
+    // 애니메이션 초기화나 이벤트 리스너 초기화
+    // v163. 이후 deprecate 
+    // getSnapshotBeforeUpdate 사용
   }
 
   getSnapshotBeforeUpdate(pervProps, pervState){

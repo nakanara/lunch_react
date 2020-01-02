@@ -8,23 +8,36 @@ export default class Contact extends React.Component {
     
   constructor(props) {
       super(props);
-      this.state = {
+      
+      const contactData = localStorage.contactData;
+      if(contactData) {
+        this.state={
           keyword: "",
           selectedKey: -1,
-          contactData: [{
-              name: 'Abet',
-              phone: '010-0000-0001'
-          }, {
-              name: 'Betty',
-              phone: '010-0000-0002'
-          }, {
-              name: 'Charlie',
-              phone: '010-0000-0003'
-          }, {
-              name: 'David',
-              phone: '010-0000-0004'
-          }]
-      };
+          contactData : JSON.parse(contactData)
+        }
+
+      } else {
+
+        this.state = {
+            keyword: "",
+            selectedKey: -1,
+            contactData: [{
+                name: 'Abet',
+                phone: '010-0000-0001'
+            }, {
+                name: 'Betty',
+                phone: '010-0000-0002'
+            }, {
+                name: 'Charlie',
+                phone: '010-0000-0003'
+            }, {
+                name: 'David',
+                phone: '010-0000-0004'
+            }]
+        };
+      }
+
       
       // this. 객체 매핑
       this.handlerChange = this.handlerChange.bind(this);
@@ -32,6 +45,15 @@ export default class Contact extends React.Component {
       this.handleCreate = this.handleCreate.bind(this);
       this.handleRemove = this.handleRemove.bind(this);
       this.handleEdit = this.handleEdit.bind(this);
+  }
+
+
+  componentDidUpdate(prevProps, prevState){
+
+    if(JSON.stringify(prevState.contactData) != JSON.stringify(this.state.contactData)){
+      localStorage.contactData = JSON.stringify(this.state.contactData);
+    }
+
   }
 
   handlerChange(e) {
